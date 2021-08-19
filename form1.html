@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Form</title>
+</head>
+<style>
+    body {background-color: #CDBBA7;}
+    p, h1, label {text-align: center;}
+    h1 {padding: 25px}
+    .col-sm-10 {padding-bottom: 5px;}
+    .form-control {background-color: #F4DFD0}
+    #sumbtn {padding-top: 10px}
+    .button {
+        display: inline-block;
+        padding: 8px 13px;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: black;
+        background-color: #DAD0C2;
+        border: none;
+        box-shadow: 0 3px #999;
+    }
+    .button:hover {background-color: #DAD0C2}
+    .button:active {
+        background-color: #DAD0C2;
+        box-shadow: 0 3px #666;
+        transform: translateY(2px);
+    }
+</style>
+<body>
+<h1>Ingrese sus datos a continuación:</h1>
+<div class="container" id="form1">
+    <form>
+        <div class="form-group row">
+            <label for="Nombre" class="col-sm-2 col-form-label">Nombre:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="Nombre" placeholder="Nombre Apellido">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="Fecha_N" class="col-sm-2 col-form-label">Fecha de nacimiento:</label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" id="Fecha_N">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="Sueldo" class="col-sm-2 col-form-label">Sueldo:</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="Sueldo" placeholder="500000">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="Sexo" class="col-sm-2 col-form-label">Sexo:</label>
+            <div class="col-sm-10">
+                <select class="form-control" id="Sexo">
+                    <option selected disabled>Seleccione</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="Edad_J" class="col-sm-2 col-form-label">Edad de jubilación:</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="Edad_J" placeholder="65">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="AFP" class="col-sm-2 col-form-label">AFP:</label>
+            <div class="col-sm-10">
+                <select class="form-control" id="AFP">
+                    <option selected disabled>Seleccione</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Cuprum">Cuprum</option>
+                    <option value="Habitat">Habitat</option>
+                    <option value="Modelo">Modelo</option>
+                    <option value="PlanVital">PlanVital</option>
+                    <option value="Provida">Provida</option>
+                    <option value="Uno">Uno</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="APV" class="col-sm-2 col-form-label">Cotización voluntaria:</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="APV" placeholder="150000">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="Saldo" class="col-sm-2 col-form-label">Saldo actual en AFP:</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="Saldo" placeholder="20000000">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="comision" class="col-sm-2 col-form-label">Comisión de su AFP:</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="comision" placeholder="1.2">
+            </div>
+        </div>
+        <div class="d-flex justify-content-center" id="sumbtn">
+            <button type="submit" class="button">Calcular ahora</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

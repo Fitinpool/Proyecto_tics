@@ -1,0 +1,35 @@
+body {
+    background-color: #CDBBA7;
+}
+
+#titulo {
+    text-align: center;
+    padding: 50px;
+    padding-top: 100px;
+}
+
+p {text-align: center;}
+
+.button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: #DAD0C2;
+    border: none;
+    box-shadow: 0 3px #999;
+}
+
+.button:hover {background-color: #DAD0C2}
+
+.button:active {
+    background-color: #DAD0C2;
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
+
+.col-md-4 {padding-top: 5rem;}

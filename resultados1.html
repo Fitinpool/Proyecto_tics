@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Home</title>
+</head>
+<style>
+    body {
+        background-color: #CDBBA7;
+    }
+    #titulo {
+        text-align: center;
+        padding: 50px;
+        padding-top: 100px;
+    }
+    .table {text-align: center;}
+
+    .button {
+        display: inline-block;
+        padding: 8px 13px;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: black;
+        background-color: #DAD0C2;
+        border: none;
+        box-shadow: 0 3px #999;
+    }
+    .button:hover {background-color: #DAD0C2}
+    .button:active {
+        background-color: #DAD0C2;
+        box-shadow: 0 3px #666;
+        transform: translateY(2px);
+    }
+</style>
+<body>
+<h1 id="titulo">Su pension</h1>
+<div class="container" id="resultado">
+    <table class="table table-bordered">
+        <caption>Resultado: Pensión final en fondo según su AFP</caption>
+        <thead>
+        <tr>
+            <th scope="col">AFP</th>
+            <th scope="col">Fondo A</th>
+            <th scope="col">Fondo B</th>
+            <th scope="col">Fondo C</th>
+            <th scope="col">Fondo D</th>
+            <th scope="col">Fondo E</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Su AFP</th>
+            <td>resultado</td>
+            <td>resultado</td>
+            <td>resultado</td>
+            <td>resultado</td>
+            <td>resultado</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="d-flex justify-content-center" id="home">
+    <a type="button" href="index.html" class="btn button">Hacer otro calculo</a>
+</div>
+</body>
+</html>

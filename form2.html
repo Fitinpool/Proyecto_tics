@@ -36,15 +36,8 @@
 </style>
 <body>
 <h1>Ingrese sus datos a continuación:</h1>
-<div class="container" id="form2">
-    <form>
-        <div class="form-group row">
-            <label for="Nombre" class="col-sm-2 col-form-label">Nombre:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="Nombre" placeholder="Nombre Apellido">
-            </div>
-        </div>
-
+<div class="container">
+    <form id="form2">
         <div class="form-group row">
             <label for="Fecha_N" class="col-sm-2 col-form-label">Fecha de nacimiento:</label>
             <div class="col-sm-10">
@@ -64,8 +57,8 @@
             <div class="col-sm-10">
                 <select class="form-control" id="Sexo">
                     <option selected disabled>Seleccione</option>
-                    <option value="M">Masculino</option>
-                    <option value="F">Femenino</option>
+                    <option value="hombre">Masculino</option>
+                    <option value="mujer">Femenino</option>
                 </select>
             </div>
         </div>
@@ -82,13 +75,13 @@
             <div class="col-sm-10">
                 <select class="form-control" id="AFP">
                     <option selected disabled>Seleccione</option>
-                    <option value="Capital">Capital</option>
-                    <option value="Cuprum">Cuprum</option>
-                    <option value="Habitat">Habitat</option>
-                    <option value="Modelo">Modelo</option>
-                    <option value="PlanVital">PlanVital</option>
-                    <option value="Provida">Provida</option>
-                    <option value="Uno">Uno</option>
+                    <option value="capital">Capital</option>
+                    <option value="cuprum">Cuprum</option>
+                    <option value="habitat">Habitat</option>
+                    <option value="modelo">Modelo</option>
+                    <option value="planvital">PlanVital</option>
+                    <option value="provida">Provida</option>
+                    <option value="uno">Uno</option>
                 </select>
             </div>
         </div>
@@ -97,13 +90,6 @@
             <label for="Saldo" class="col-sm-2 col-form-label">Saldo actual en AFP:</label>
             <div class="col-sm-10">
                 <input type="number" class="form-control" id="Saldo" placeholder="20000000">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="comision" class="col-sm-2 col-form-label">Comisión de su AFP:</label>
-            <div class="col-sm-10">
-                <input type="number" class="form-control" id="comision" placeholder="1.2">
             </div>
         </div>
 
@@ -121,3 +107,6 @@
 </div>
 </body>
 </html>
+
+<script src="/Proyecto_TICS/calculos.js"></script>
+<script src="/Proyecto_TICS/form2.js"></script>

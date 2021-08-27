@@ -5,5 +5,5 @@ cargaCalculos();
 
 function cargaCalculos()
 {
-    calculo_form2.addEventListener('click', (e) => {calcular.pensionFutura(e)});
+    calculo_form2.addEventListener('click', (e) => {calcular.resultados2(e)});
 }

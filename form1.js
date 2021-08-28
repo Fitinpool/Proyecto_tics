@@ -1,9 +1,24 @@
 const calcular = new Calculos();
-const calculo_form1 = document.getElementById("form1");
 
-cargaCalculos();
-
-function cargaCalculos()
-{
-    calculo_form1.addEventListener('click', (e) => {calcular.resultados1(e)});
-}
+(function () {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+          if(form.checkValidity())
+          {
+            calcular.resultados1(event);
+          }
+        }, false)
+      })
+    
+  })()

@@ -1,3 +1,18 @@
+const fondosAFP = {
+    capital : [1.0052538280408596, 1.004527221543641, 1.0061774025897503, 1.0033380295383023, 1.0032576602600798],
+    cuprum : [1.0052459611277158, 1.004527221543641, 1.0064184974022432, 1.0034584508349766, 1.0034022740126778],
+    habitat : [1.0053245998017803, 1.0046302455190648, 1.0064262640857444, 1.0035386434752658, 1.0034664732719605],
+    modelo : [1.005277424717846, 1.0045192918063746, 1.0062941407136823, 1.0033380295383023, 1.0032978537514263],
+    planvital : [1.0049701916105216, 1.0043367175322409, 1.0063252457367005, 1.0030322487646148, 1.0028224379721813],
+    provida : [1.0053088774793386, 1.004384380809392, 1.0061306655932825, 1.003153074208474, 1.0030241880399],
+    uno : [1.005277424717846, 1.0045192918063746, 1.0062941407136823, 1.0033380295383023, 1.0032978537514263]   
+};
+
+const vidaEstimada = {
+    hombre : 85,
+    mujer : 90
+}
+
 class Calculos
 {
     resultados1(e)
@@ -40,21 +55,6 @@ class Calculos
 
     pensionFutura(form)
     {
-        const fondosAFP = {
-            capital : [1.0058, 1.0046, 1.0064, 1.0034, 1.0033],
-            cuprum : [1.0054, 1.0046, 1.0067, 1.0035, 1.0035],
-            habitat : [1.0055, 1.0048, 1.0067, 1.0036, 1.0035],
-            modelo : [1.0054, 1.0046, 1.0065, 1.0034, 1.0034],
-            planvital : [1.0051, 1.0044, 1.0066, 1.0031,1.0029],
-            provida : [1.0055, 1.0045, 1.0063, 1.0032, 1.0031],
-            uno : [1.0054, 1.0046, 1.0065, 1.0034, 1.0034]
-        };
-
-        const vidaEstimada = {
-            hombre : 85,
-            mujer : 90
-        }
-
         var cotizacionTotal = (parseInt(form.querySelector("#Sueldo").value))* 0.1 + parseInt(form.querySelector("#APV").value);
 
         const fecha = new Date();
@@ -77,7 +77,7 @@ class Calculos
             {
                 fondoTotal[i] += cotizacionTotal;
 
-                fondoTotal[i] = fondoTotal[i] * fondosAFP[form.querySelector('#AFP').value.toString()][i];
+                fondoTotal[i] = fondoTotal[i] * fondosAFP[form.querySelector('#AFP').value.toString()][i]; // fondoTotal[i] + fondoTotal[i] * 0.003
             }
         }
 
@@ -90,30 +90,12 @@ class Calculos
              //cambiar promedio de vida ondoTotal[i]/((vidaEstimada[form.querySelector('#Sexo').value.toString()] - EdadJubilacion)*12)
         }
 
-        console.log(pension);
-
         return pension;
         
     }
 
     pensionDeseada(form)
     {
-
-        const fondosAFP = {
-            capital : [1.0058, 1.0046, 1.0064, 1.0034, 1.0033],
-            cuprum : [1.0054, 1.0046, 1.0067, 1.0035, 1.0035],
-            habitat : [1.0055, 1.0048, 1.0067, 1.0036, 1.0035],
-            modelo : [1.0054, 1.0046, 1.0065, 1.0034, 1.0034],
-            planvital : [1.0051, 1.0044, 1.0066, 1.0031,1.0029],
-            provida : [1.0055, 1.0045, 1.0063, 1.0032, 1.0031],
-            uno : [1.0054, 1.0046, 1.0065, 1.0034, 1.0034]
-        };
-
-        const vidaEstimada = {
-            hombre : 85,
-            mujer : 90
-        }
-        
         var cotizacionTotal = (parseInt(form.querySelector("#Sueldo").value))* 0.1;
 
         const fecha = new Date();
